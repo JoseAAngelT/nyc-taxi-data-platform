@@ -1,0 +1,21 @@
+project:
+  name: nyc-taxi-data-platform
+  description: Plataforma analítica para datos de viajes de taxi en NYC
+
+paths:
+  raw: data/raw
+  bronze: data/bronze
+  silver: data/silver
+  gold: data/gold
+
+source:
+  dataset: nyc_tlc_trip_records
+  taxi_type: yellow
+  start_year: 2025
+  start_month: 1
+  end_year: 2025
+  end_month: 6
+
+database:
+  engine: duckdb
+  path: data/gold/nyc_taxi_analytics.duckdb

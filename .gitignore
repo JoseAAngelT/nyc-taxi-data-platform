@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files
+data/raw/
+data/bronze/
+data/silver/
+data/gold/
+*.csv
+*.parquet
+*.xlsx
+
+# Power BI
+*.pbix
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
