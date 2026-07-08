@@ -22,3 +22,4 @@ database:
 
 quality:
   min_bronze_rows: 1
+  min_silver_rows: 1
