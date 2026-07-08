@@ -16,6 +16,10 @@ source:
   end_year: 2025
   end_month: 1
 
+zone_lookup:
+  url: https://d37ci6vzurychx.cloudfront.net/misc/taxi_zone_lookup.csv
+  file_name: taxi_zone_lookup.csv
+
 database:
   engine: duckdb
   path: data/gold/nyc_taxi_analytics.duckdb
@@ -23,3 +27,4 @@ database:
 quality:
   min_bronze_rows: 1
   min_silver_rows: 1
+  min_zone_rows: 200
