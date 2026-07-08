@@ -14,7 +14,7 @@ source:
   start_year: 2025
   start_month: 1
   end_year: 2025
-  end_month: 6
+  end_month: 1
 
 database:
   engine: duckdb

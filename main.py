@@ -1,18 +1,22 @@
 """Punto de entrada principal del proyecto NYC Taxi Data Platform."""
 
-from src.ingestion.remote_taxi_reader import (
-    get_remote_taxi_schema,
-    preview_remote_taxi_data,
-)
+from src.ingestion.download_taxi_data import download_taxi_data_from_config
+from src.utils.config_loader import load_config
 
 
 def main() -> None:
-    """Ejecuta una primera prueba de lectura remota del dataset."""
+    """Ejecuta la ingesta Raw del proyecto."""
     print("NYC Taxi Data Platform")
-    print("Probando lectura remota de datos Parquet...")
+    print("Iniciando descarga controlada de datos Raw...")
 
-    get_remote_taxi_schema(year=2025, month=1, taxi_type="yellow")
-    preview_remote_taxi_data(year=2025, month=1, taxi_type="yellow", limit=5)
+    config = load_config()
+    downloaded_files = download_taxi_data_from_config(config)
+
+    print("Descarga finalizada.")
+    print(f"Archivos procesados: {len(downloaded_files)}")
+
+    for file_path in downloaded_files:
+        print(f"- {file_path}")
 
 
 if __name__ == "__main__":
