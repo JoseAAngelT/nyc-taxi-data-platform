@@ -19,3 +19,6 @@ source:
 database:
   engine: duckdb
   path: data/gold/nyc_taxi_analytics.duckdb
+
+quality:
+  min_bronze_rows: 1
